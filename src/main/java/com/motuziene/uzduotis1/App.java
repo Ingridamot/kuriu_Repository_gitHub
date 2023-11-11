@@ -19,14 +19,20 @@ public class App {
 //        };
 
 
-       Starter starter = (startupName, founderName) -> startupName + " - " + founderName;
+//       Starter starter = (startupName, founderName) -> startupName + " - " + founderName;
+//
+//        String startupInfo = starter.start("My Startup", "Fiesta");
+//        System.out.println("Startup info: " + startupInfo);
+//
+//        starter.progress();
+//
+//        String result = Starter.finish();
+//        System.out.println("Finish result: " + result);
 
-        String startupInfo = starter.start("My Startup", "Fiesta");
-        System.out.println("Startup info: " + startupInfo);
+        InjectableTranslator injectableTranslator = new InjectableTranslator();
 
-        starter.progress();
+        SpeechEngine speechEngine = new SpeechEngine(injectableTranslator);
 
-        String result = Starter.finish();
-        System.out.println("Finish result: " + result);
+        System.out.println(speechEngine.speak("hello"));
     }
 }
