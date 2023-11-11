@@ -1,4 +1,4 @@
-package com.motuziene.uzduotis4;
+package com.motuziene.uzduotis5;
 
 public record Customer (String firsName, String lastName, String email, String phone){
 
